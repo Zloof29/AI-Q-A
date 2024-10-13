@@ -1,2 +1,7 @@
 .Container {
+  display: flex;
+}
+
+.Container > div:last-child {
+  flex: auto;
 }
