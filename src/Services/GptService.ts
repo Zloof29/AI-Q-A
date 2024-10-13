@@ -1,5 +1,6 @@
 import axios from "axios";
 import { appConfig } from "../Utils/AppConfig";
+import { GptResponseModel } from "../Models/GptResponseModel";
 
 class GptService {
   public async getCompletion(
@@ -22,7 +23,7 @@ class GptService {
       },
     };
 
-    const axiosResponse = await axios.post(
+    const axiosResponse = await axios.post<GptResponseModel>(
       appConfig.gptUrl,
       requestBody,
       options
@@ -30,7 +31,7 @@ class GptService {
 
     const gptResponse = axiosResponse.data;
 
-    const completion = gptResponse.choices[0].messages.content;
+    const completion = gptResponse.choices[0].message.content;
 
     return completion;
   }
