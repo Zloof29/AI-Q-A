@@ -1,7 +1,11 @@
-.Heder {
+.Container {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4vh;
+  font-size: 3vh;
+}
+
+.Text {
+  color: white;
 }

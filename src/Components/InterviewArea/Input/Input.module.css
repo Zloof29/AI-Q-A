@@ -1,0 +1,41 @@
+.Form {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px black;
+  width: 300px;
+  text-align: left;
+  margin: 30px auto;
+}
+
+.Label {
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: x-large;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
