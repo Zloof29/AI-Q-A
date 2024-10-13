@@ -1,16 +1,20 @@
 import { useState } from "react";
 import { InterviewModel } from "../../../Models/InterviewModel";
-import { Input } from "../../InterviewArea/Input/Input";
-import { Output } from "../../InterviewArea/Output/Output";
+import { Input } from "../Input/Input";
+import { Output } from "../Output/Output";
 import css from "./Main.module.css";
+import { interviewService } from "../../../Services/InterviewService";
 
 export function Main(): JSX.Element {
   const [completion, setCompletion] = useState<string>("");
 
-  function fetch(interview: InterviewModel) {
-    setCompletion(
-      interview.subject + " " + interview.level + " " + interview.count
-    );
+  async function fetch(interview: InterviewModel) {
+    try {
+      const qna = await interviewService.getQNA(interview);
+      setCompletion(qna);
+    } catch (error: any) {
+      alert(error.message);
+    }
   }
 
   return (

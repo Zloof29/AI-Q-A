@@ -1,6 +1,6 @@
 import { Footer } from "../Footer/Footer";
 import { Heder } from "../Heder/Heder";
-import { Main } from "../Main/Main";
+import { Main } from "../../InterviewArea/Main/Main";
 import css from "./Layout.module.css";
 
 export function Layout(): JSX.Element {
