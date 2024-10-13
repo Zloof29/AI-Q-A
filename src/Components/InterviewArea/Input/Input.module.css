@@ -1,15 +1,16 @@
 .Form {
   background: white;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px black;
   width: 300px;
   text-align: left;
-  margin: 30px auto;
+  margin: 20px;
 }
 
 .Label {
-  display: block;
+  /* display: block; */
+  margin-bottom: 5px;
   margin-bottom: 5px;
   color: black;
 }

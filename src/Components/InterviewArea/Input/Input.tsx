@@ -3,11 +3,15 @@ import css from "./Input.module.css";
 import { InterviewModel } from "../../../Models/InterviewModel";
 import { Level } from "../../../Models/Level";
 
-export function Input(): JSX.Element {
+type InputProps = {
+  generate: (interview: InterviewModel) => void;
+};
+
+export function Input(props: InputProps): JSX.Element {
   const { register, handleSubmit } = useForm<InterviewModel>();
 
   function send(interview: InterviewModel) {
-    console.log(interview);
+    props.generate(interview);
   }
 
   return (
@@ -18,20 +22,13 @@ export function Input(): JSX.Element {
 
         <label className={css.Label}>Level: </label>
         <select {...register("level")} required>
-          <option selected>{Level.Beginner}</option>
+          <option>{Level.Beginner}</option>
           <option>{Level.Intermediate}</option>
           <option>{Level.Expert}</option>
         </select>
 
         <label className={css.Label}>Count: </label>
-        <input
-          type="number"
-          min={1}
-          max={20}
-          value={5}
-          {...register("count")}
-          required
-        />
+        <input type="number" min={1} max={20} {...register("count")} required />
 
         <button>Generate</button>
       </form>
