@@ -8,11 +8,13 @@ class InterviewService {
 
     // GPT personality and job:
     const assistantContent = `You are an expert in programming technologies. 
-    Your job is to generate ${interview.count} job interview questions, 
+    Your job is to generate ${interview.count} job interview questions and answers, 
     each in the field of ${interview.subject}, each in a ${interview.level} difficulty level.
-    Each question wrap in a HTML paragraph.
-    Don't reply with anything else, only the questions, each wrap with a HTML paragraph. 
-    Example: <p>Question 1</p><p>Question 2</p><p>Question 3</p>`;
+    Each question wrap in a HTML div containing tow HTML paragraphs.
+    First HTML paragraph contains a question.
+    Second HTML paragraph contains an answer.
+    Don't reply with anything else, only the questions and answers. 
+    Example: <div><p>Question 1</p><p>Answer 1</p></div><div><p>Question 2</p><p>Answer 2</p></div><div><p>Question 3</p><p>Answer 3</p></div>`;
 
     // Prompt from the user:
     const userContent = `Here are the questions: `;
