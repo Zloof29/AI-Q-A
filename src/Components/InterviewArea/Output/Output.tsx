@@ -5,5 +5,9 @@ type OutputProps = {
 };
 
 export function Output(props: OutputProps): JSX.Element {
-  return <div className={css.Container}>{props.qna}</div>;
+  return (
+    <div className={css.Container}>
+      <div dangerouslySetInnerHTML={{ __html: props.qna }}></div>
+    </div>
+  );
 }

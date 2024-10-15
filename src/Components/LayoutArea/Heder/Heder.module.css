@@ -1,9 +1,23 @@
+@keyframes shadowMove {
+  0% {
+    box-shadow: 0 0 5px cyan, 0 0 5px cyan, 0 0 15px cyan;
+  }
+  50% {
+    box-shadow: 0 5px 5px cyan, 0 5px 5px cyan, 0 5px 15px cyan;
+  }
+  100% {
+    box-shadow: 0 0 5px cyan, 0 0 5px cyan, 0 0 15px cyan;
+  }
+}
+
 .Container {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 4vh;
+  border-bottom: 4px solid white;
+  animation: shadowMove 2s infinite;
 }
 
 .Title {
