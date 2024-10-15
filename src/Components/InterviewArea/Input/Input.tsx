@@ -18,19 +18,31 @@ export function Input(props: InputProps): JSX.Element {
     <div className={css.Container}>
       <form className={css.Form} onSubmit={handleSubmit(send)}>
         <label className={css.Label}>Subject: </label>
-        <input type="text" {...register("subject")} required />
+        <input
+          className={css.Input}
+          type="text"
+          {...register("subject")}
+          required
+        />
 
         <label className={css.Label}>Level: </label>
-        <select {...register("level")} required>
-          <option>{Level.Beginner}</option>
-          <option>{Level.Intermediate}</option>
-          <option>{Level.Expert}</option>
+        <select className={css.Select} {...register("level")} required>
+          <option value={Level.Beginner}>{Level.Beginner}</option>
+          <option value={Level.Intermediate}>{Level.Intermediate}</option>
+          <option value={Level.Expert}>{Level.Expert}</option>
         </select>
 
         <label className={css.Label}>Count: </label>
-        <input type="number" min={1} max={20} {...register("count")} required />
+        <input
+          className={css.Input}
+          type="number"
+          min={1}
+          max={20}
+          {...register("count")}
+          required
+        />
 
-        <button>Generate</button>
+        <button className={css.Button}>Generate</button>
       </form>
     </div>
   );

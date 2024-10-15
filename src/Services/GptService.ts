@@ -9,7 +9,7 @@ class GptService {
     userContent: string
   ): Promise<string> {
     const requestBody = {
-      model: "GPT-4o",
+      model: "gpt-4o",
       messages: [
         { role: "system", content: systemContent },
         { role: "assistant", content: assistantContent },
