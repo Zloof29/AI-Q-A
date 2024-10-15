@@ -10,4 +10,5 @@
 
 .Container > .Section > div > p:last-child {
   display: none;
+  color: cyan;
 }
