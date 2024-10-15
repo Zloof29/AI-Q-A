@@ -40,3 +40,7 @@
 .Button:hover {
   background-color: #00bfff;
 }
+
+.Button:active {
+  transform: scale(0.98);
+}

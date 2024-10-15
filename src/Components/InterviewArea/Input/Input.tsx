@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import css from "./Input.module.css";
 import { InterviewModel } from "../../../Models/InterviewModel";
 import { Level } from "../../../Models/Level";
+import { useState } from "react";
 
 type InputProps = {
   generate: (interview: InterviewModel) => void;
