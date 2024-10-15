@@ -4,4 +4,10 @@
   padding: 20px;
   border-radius: 10px;
   font-size: larger;
+  overflow: auto;
+  height: 425px;
+}
+
+.Container > .Section > div > p:last-child {
+  display: none;
 }
