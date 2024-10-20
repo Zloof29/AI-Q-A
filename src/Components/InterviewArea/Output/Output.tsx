@@ -6,13 +6,13 @@ type OutputProps = {
 };
 
 export function Output(props: OutputProps): JSX.Element {
-  const [spinner, setSpinner] = useState(false);
+  const [message, setMessage] = useState(false);
 
   useEffect(() => {
     if (!props.qna) {
-      setSpinner(true);
+      setMessage(true);
     } else {
-      setSpinner(false);
+      setMessage(false);
     }
   }, [props.qna]);
 
@@ -29,13 +29,14 @@ export function Output(props: OutputProps): JSX.Element {
 
   return (
     <div className={css.Container}>
-      {spinner ? (
+      {message ? (
         <p className={css.Spinner}>
-          <div>
+          <>
             The waiting time for the generate depends on the amount you
             inserted.
-          </div>
-          <div>For the answer click on the question</div>
+          </>
+          <br />
+          <>For the answer click on the question</>
         </p>
       ) : (
         <section
