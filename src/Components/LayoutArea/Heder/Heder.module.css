@@ -23,3 +23,15 @@
 .Title {
   color: white;
 }
+
+@media (max-width: 600px) {
+  .Container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vh;
+    border-bottom: 4px solid white;
+    animation: shadowMove 2s infinite;
+  }
+}

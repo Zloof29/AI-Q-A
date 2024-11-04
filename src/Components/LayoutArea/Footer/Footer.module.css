@@ -25,3 +25,19 @@
 .Text {
   color: white;
 }
+
+@media (max-width: 600px) {
+  .Container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 280px;
+    font-size: 2vh;
+    border-top: 4px solid white;
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px cyan, 0 20px 20px cyan, 0 40px 40px cyan;
+    animation: shadowMoveUp 2s infinite;
+  }
+}
