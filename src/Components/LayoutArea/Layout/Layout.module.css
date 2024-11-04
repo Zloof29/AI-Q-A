@@ -4,8 +4,3 @@
   display: grid;
   grid-template-rows: 15% 75% 10%;
 }
-
-/* .Container,
-.Container > * {
-  border: 2px solid white;
-} */

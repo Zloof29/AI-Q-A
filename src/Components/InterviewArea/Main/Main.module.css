@@ -5,3 +5,10 @@
 .Container > div:last-child {
   flex: auto;
 }
+
+@media (max-width: 600px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+  }
+}
