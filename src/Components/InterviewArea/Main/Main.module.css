@@ -6,7 +6,21 @@
   flex: auto;
 }
 
+@media (max-width: 1441px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 600px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 376px) {
   .Container {
     display: flex;
     flex-direction: column;
